@@ -8,7 +8,6 @@ var minCost = function(s, cost) {
     for (let i = 0; i < s.length-1; i++) {
         if (s[i] === s[i+1]) {
             
-            
             if(cost[i]<cost[i+1])
             {
                 sum=sum +cost[i];
