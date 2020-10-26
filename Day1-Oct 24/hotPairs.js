@@ -2,16 +2,23 @@
 //Eg. 1,2,3,1,1,2,3,4 - Ans. 5
 
 
+// O(N*N)
+
 var hotPairs= function (arr){
         let sum=0;
         for(i=0;i<arr.length;i++)
             {
-                if(arr[i]<arr[i+1])
+                for(j=i+1;j<arr.length;j++)
                 {
+                   // console.log(i,j);
+                    if(arr[i]===arr[j])
+                    {
+                    // console.log(arr[i],arr[j]);   
                      sum=sum+1;   
+                    }
                 }
             }
             console.log(sum);
 };
 
-hotPairs([1,2,3,1,1,2,3,4,5]);
+hotPairs([1,2,3,1,1,3]);
