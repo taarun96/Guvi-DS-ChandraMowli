@@ -18,6 +18,7 @@ var minCost = function(s, cost) {
                 sum=sum+cost[i+1];
             }
             
+            cost[i+1]=Math.max(cost[i],cost[i+1]);
         }
     }
     console.log(sum);
@@ -28,3 +29,4 @@ var minCost = function(s, cost) {
 minCost("abaacaa",[7,6,5,4,3,2,1]);
 minCost("abc",[1,2,3]);
 minCost("aabaa",[1,2,3,4,1]);
+minCost("aaaaa",[1,2,3,4,5]);
