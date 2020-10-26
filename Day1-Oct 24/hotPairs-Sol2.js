@@ -2,7 +2,7 @@
 //Eg. 1,2,3,1,1,2,3,4 - Ans. 5
 
 
-
+//O(NLOGN+N)--->O(NLOGN);
 
 var hotPairs= function (arr){
     let sum=0;
@@ -11,17 +11,15 @@ var hotPairs= function (arr){
     let i=0;
     for(j=0;j<arr1.length;j++)
        {
-            
                 if(arr1[j]===arr1[i])
                 {
-            //     console.log(j,i,arr1[j],arr1[i]);   
+                //console.log(`first index:${j},second index:${i},first element: ${arr1[j]},second element:${ar[i]}`);   
                  sum= sum+j-i;
-            //     console.log(sum);
+               //  console.log(sum);
                 }
                 else{
                     i=j;
-                }
-            
+                }            
         }
         console.log(sum);
 };
